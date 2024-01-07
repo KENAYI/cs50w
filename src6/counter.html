@@ -10,24 +10,23 @@
         <div id="app"></div>
 
         <script type="text/babel">
-
-            function App() {
-
+                function App() {
+                // Allows to update state
                 const [count, setCount] = React.useState(0);
-
+                // Updates state to new value
                 function updateCount() {
                     setCount(count + 1);
                 }
-
+                // Interacts with click calling App component
                 return (
                     <div>
                         <h1>{count}</h1>
                         <button onClick={updateCount}>Count</button>
                     </div>
                 );
-            }
-
-            ReactDOM.render(<App />, document.querySelector("#app"));
+                }
+                // Inserts App component into DOM to be rendered
+                ReactDOM.render(<App />, document.querySelector("#app"));
         </script>
     </body>
 </html>
